@@ -1,0 +1,118 @@
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    @media (max-width: $md2) {
+        background-color: $white;
+    }
+    @media (max-width: $md2) {
+        position: fixed;
+    }
+    &__logo {
+        font-weight: bold;
+        font-size: rem(24);
+        line-height: rem(32);
+        letter-spacing: rem(0.1);
+        margin-right: rem(20);
+    }
+    &__container {
+        height: rem($headerHeight);
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu {
+        &__list {
+            display: inline-flex;
+            gap: rem(25);
+            transition: top ease .5s;
+            @media (max-width: $md4) {
+                background-color: $white;
+                margin: 0;
+                padding-top: rem(45);
+                padding-bottom: rem(100);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-weight: 400;
+                font-size: rem(30);
+                line-height: rem(45);
+                z-index: -2;
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                color: $gray;
+            }
+            @media (max-width: $md3) {
+                gap: rem(15);
+            }
+            &:last-child {
+                margin-left: rem(50);
+            }
+            &.active {
+                top: $headerHeight;
+            }
+        }
+        &__icons {
+            display: inline-flex;
+            margin-left: rem(50);
+            gap: rem(25);
+            @media (max-width: $md3) {
+                margin-left: rem(25);
+            }
+        }
+        &__link {
+            font-size: rem(14);
+            line-height: rem(24);
+            letter-spacing: rem(0.2);
+            color: $gray;
+            transition: color ease .3s;
+            &:hover {
+                color: $blue;
+                svg path {
+                    fill: $blue;
+                }
+            }
+            @media (max-width: $md4) {
+                font-size: rem(30);
+                line-height: rem(45);
+                letter-spacing: rem(0.2);
+                margin-bottom: rem(40);
+                svg {
+                    height: rem(24);
+                    width: rem(24);
+                }
+            }
+        }
+        &__btn {
+            display: none;
+            width: rem(30);
+            height: rem(30);
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            margin-top: rem(12);
+            @media (max-width: $md4) {
+                display: inline-block;
+            }
+            .menu__btn-active {
+                display: none;
+                path {
+                    fill: $gray;
+                }
+            }
+            &.active {
+                margin-top: rem(10);
+                .menu__btn-active {
+                    display: block;
+                }
+                .menu__btn-no-active {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+

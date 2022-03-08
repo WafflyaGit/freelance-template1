@@ -1,0 +1,83 @@
+.why-choose-us {
+    color: $black;
+    &__cards {
+        display: flex;
+        justify-content: center;
+        @media (max-width: $md2) {
+            flex-wrap: wrap;
+        }
+        margin-top: rem(80);
+        gap: rem(30);
+    }
+    &__card {
+        cursor: default;
+        width: rem(328);
+        border-radius: rem(10);
+        background-color: $lightBlue2;
+        transition: box-shadow ease .2s;
+        &:hover {
+            box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        }
+        .card {
+            &__header {
+                width: 100%;
+                height: rem(132px);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &__icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: rem(72);
+                width: rem(72);
+                background-color: white;
+                border-radius: 50%;
+            }
+            &__title {
+                margin-left: rem(15);
+                font-weight: bold;
+                font-size: rem(16);
+                line-height: rem(24);
+                letter-spacing: rem(0.1);
+            }
+            &__content {
+                width: 100%;
+                background-color: white;
+                border-radius: rem(10);
+                border: 1px solid $lightBlue3;
+                padding: rem(30) rem(45);
+            }
+            &__list {
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: rem(24);
+                letter-spacing: rem(0.2);
+                color: $gray;
+                margin-bottom: rem(10);
+                &_item {
+                    &:not(:last-child) {
+                        margin-bottom: rem(5);
+                    }
+                    &::before {
+                        content: '-';
+                        display: inline-block;
+                        margin-right: rem(10);
+                    }
+                }
+            }
+            &__link {
+                font-weight: 600;
+                font-size: rem(14);
+                line-height: rem(24);
+                letter-spacing: rem(0.2);
+                color: $orange;
+                transition: color ease .2s;
+                &:hover {
+                    color: $lightOrange;
+                }
+            }
+        }
+    }
+}

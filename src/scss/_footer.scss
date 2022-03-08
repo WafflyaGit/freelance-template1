@@ -1,0 +1,134 @@
+footer.footer {
+    width: 100%;
+    background-color: $black;
+    .footer {
+        &__container {
+            padding: 0 rem(30);
+            @media (max-width: $md3) {
+                padding-top: rem(50);
+            }
+        }
+        &__logo {
+            font-weight: bold;
+            font-size: rem(24);
+            line-height: rem(32);
+            letter-spacing: rem(0.1);
+            color: white;
+        }
+        &__header {
+            height: rem(142);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $darkBlue2;
+            @media (max-width: $md4) {
+                flex-direction: column;
+                align-items: baseline;
+                height: rem(120);
+                border-bottom: none;
+            }
+            .menu {
+                display: flex;
+                align-items: center;
+                gap: rem(20);
+            }
+        }
+        &__content {
+            padding: rem(70) 0;
+            color: white;
+            .menu {
+                display: flex;
+                flex-wrap: wrap;
+                gap: rem(30);
+                justify-content: space-between;
+                @media (max-width: $md4) {
+                    flex-direction: column;
+                    justify-content: baseline;
+                }
+                &__item {
+                    .item {
+                        &__title {
+                            font-weight: bold;
+                            font-size: rem(16);
+                            line-height: rem(24);
+                            letter-spacing: rem(0.1);
+                            margin-bottom: rem(20);
+                        }
+                        &__list {
+                            .subitem {
+                                &__item {
+                                    margin-bottom: rem(10);
+                                }
+                                &__link {
+                                    font-weight: 600;
+                                    font-size: rem(14);
+                                    line-height: rem(24);
+                                    letter-spacing: rem(0.2);
+                                    color: $mutedGray;
+                                }
+                            }
+                        }
+                    }
+                }
+                &__form {
+                    small {
+                        font-size: rem(12);
+                        line-height: rem(28);
+                        letter-spacing: rem(0.2);
+                        color: $mutedGray
+                    }
+                }
+                &__input {
+                    border-radius: rem(5);
+                    height: rem(48);
+                    border: 1px solid $mutedGray;
+                    display: flex;
+                    input {
+                        margin: 0;
+                        border-radius: rem(4) 0 0 rem(4);
+                        padding: rem(15) rem(20);
+                        border: none;
+                        font-weight: normal;
+                        font-size: rem(14);
+                        line-height: rem(28);
+                        letter-spacing: rem(0.2);
+                        color: $mutedGray;
+                        height: 100%;
+                        width: 100%;
+                    }
+                    button {
+                        margin: 0;
+                        border-radius: 0 rem(3) rem(3) 0;
+                        border: none;
+                        height: 100%;
+                        background-color: $orange;
+                        font-weight: normal;
+                        font-size: rem(14);
+                        line-height: rem(28);
+                        text-align: center;
+                        letter-spacing: rem(0.2);
+                        color: white;
+                        padding: 0 rem(20);
+                        border-left: 1px solid $mutedGray;
+                    }
+                }
+            }
+        }
+        &__footer {
+            background-color: $lightBlue4;
+            .footer__container {
+                height: rem(74);
+                display: flex;
+                align-items: center;
+            }
+        }
+        &__text {
+            font-weight: 600;
+            font-size: rem(14);
+            line-height: rem(24);
+            letter-spacing: rem(0.2);
+            color: white;
+            opacity: .7;
+        }
+    }
+}

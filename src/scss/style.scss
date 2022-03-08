@@ -1,0 +1,68 @@
+@use 'sass:math';
+@import "base/null.scss";
+@import "base/functions.scss";
+
+// Variables
+$headerHeight: 104px;
+$containerMaxWidth: 1050px;
+$containerPadding: 30px;
+$fontSize: rem(16);
+
+// Breakpoints
+$md1: math.div($containerMaxWidth + $containerPadding, 16) + em;
+$md2: math.div(991.98, 16) + em;
+$md3: math.div(767.98, 16) + em;
+$md4: math.div(544.98, 16) + em;
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap");
+// Colors
+$black: #252B42;
+$gray: #737373;
+$blue: #00A0C1;
+$white: #F6F6F6;
+$orange: #FFA62B;
+
+$lightGray: #F9F9F9;
+$lightGray2: #FAFAFA;
+$mutedGray: #BDBDBD;
+$lightBlue: #00c5ec;
+$lightBlue2: #D9EDFF;
+$lightBlue3: #A9D6FF;
+$lightBlue4: #16697A;
+$darkBlue: #10515e;
+$darkBlue2: #364067;
+$lightOrange: #ffc068;
+
+body {
+    font-size: $fontSize;
+    font-family: Montserrat;
+    color: $black;
+}
+
+// Container
+[class*='__container'] {
+    max-width: $containerMaxWidth;
+    margin: 0 auto;
+    padding: $containerPadding;
+    @media (max-width: $md1) {
+        max-width: 970px;
+    }
+    @media (max-width: $md2) {
+        max-width: 750px;
+    }
+    @media (max-width: $md3) {
+        padding: 0 15px;
+    }
+    @media (max-width: $md4) {
+        padding: 0 42px;
+    }
+}
+
+@import "_header.scss";
+@import "main.scss";
+@import "_footer.scss";
+
+// Plugins
+//@import "base/accordions.scss";
+//@import "base/modals.scss";
